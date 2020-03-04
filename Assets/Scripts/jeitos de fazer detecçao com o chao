@@ -1,0 +1,15 @@
+/**
+            AMBAS PRECISAM DE UMA VARIAVEL Transform Que vai pegar o gameObject que vai analisar se estar
+            tocando o chao
+            ASSIM: (public Transform groundCheck;)
+
+            #cria  uma linha do centro do objetodo personagemae o centro do objeto que checa se esta pisando no chao
+                isOnFloor = Physics2D.Linecast(transform.position, groundCheck.position, whatIsGround);
+            
+            #ja OverlapCircle cria um circulo em volta do objeto que checa se esta pisando no chao
+                isOnFloor = Physics2D.OverlapCircle(groundCheck.position, radius, whatIsGround);
+            
+            #esse forma nao precisa do objeto que verifica se o personagem esta tocando o cha
+             entao pode desabilitar o checkGround, pq ele usar o RigidBody2D do personagem para fazer essa verificação
+                isOnFloor = body.IsTouchingLayers(whatIsGround);
+        */
